@@ -5,16 +5,17 @@
 <title>达播春11期 · 正常班快照（2026-05-12）深蓝版</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;background:#f0f4fa;color:#1a2e22;font-size:14px}
+html,body{max-width:100%;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;background:#f0f4fa;color:#1a2e22;font-size:14px;-webkit-text-size-adjust:100%}
 .header{background:linear-gradient(135deg,#1a3a6b,#0f2548);color:white;padding:20px 24px}
-.header h1{font-size:20px;font-weight:700}
+.header h1{font-size:17px;font-weight:700}
 .header .meta{font-size:12px;opacity:.8;margin-top:6px}
 .kpi-bar{background:white;display:flex;border-bottom:2px solid #c5d8f0}
 .kpi-item{flex:1;padding:14px 16px;text-align:center;border-right:1px solid #e0ecf8}
 .kpi-item:last-child{border-right:none}
 .kpi-item .num{font-size:24px;font-weight:800;color:#1a3a6b}
 .kpi-item .label{font-size:11px;color:#888;margin-top:3px}
-.section{background:white;margin:12px 16px;border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.section{background:white;margin:10px 10px;border-radius:8px;padding:14px 12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .section-title{font-size:14px;font-weight:700;color:#1a3a6b;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #c5d8f0}
 .vel-note{font-size:11px;font-weight:400;color:#888}
 table{width:100%;border-collapse:collapse;font-size:13px}
@@ -35,8 +36,21 @@ details:not([open]) summary.ch-header::before{content:"▶ "}
 .inf-table td{padding:6px 10px;border-bottom:1px solid #f0f4fa;text-align:center}
 .inf-table td:first-child{text-align:left}
 .inf-table tr:hover td{background:#f2f6fc}
-.wide-wrap{overflow-x:auto}
+.wide-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .wide-wrap table{min-width:900px}
+/* 普通表格也可横滑 */
+.section > table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%}
+/* details内表格 */
+.inf-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%}
+
+@media (max-width: 600px) {
+  .header{padding:14px 14px}
+  .section{margin:8px 8px;padding:12px 10px}
+  .kpi-item{flex:1 1 45%}
+  th,td{padding:6px 7px;font-size:12px}
+  .section-title{font-size:13px}
+  .inf-table th,.inf-table td{padding:5px 7px;font-size:12px}
+}
 </style>
 </head>
 <body>
@@ -247,7 +261,7 @@ details:not([open]) summary.ch-header::before{content:"▶ "}
   <div class="section-title">⑥ T+2 活跃率（2026-05-12 当日正常班）
     <span class="vel-note">&nbsp;整体 149/394 = <strong>37.8%</strong> &nbsp;|&nbsp;<span style="color:#c62828">■</span> 低于大盘37.8%</span>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
     <div>
       <div style="font-size:13px;font-weight:600;color:#1a3a6b;margin-bottom:8px">按渠道</div>
       <table><thead><tr><th style="text-align:left">渠道</th><th>活跃/正常班</th><th>T+2活跃率</th></tr></thead>
