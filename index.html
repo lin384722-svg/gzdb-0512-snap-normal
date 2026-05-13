@@ -36,11 +36,8 @@ details:not([open]) summary.ch-header::before{content:"▶ "}
 .inf-table td{padding:6px 10px;border-bottom:1px solid #f0f4fa;text-align:center}
 .inf-table td:first-child{text-align:left}
 .inf-table tr:hover td{background:#f2f6fc}
-.wide-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.wide-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
 .wide-wrap table{min-width:900px}
-/* 普通表格也可横滑 */
-.section > table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%}
-/* details内表格 */
 .inf-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%}
 
 @media (max-width: 600px) {
@@ -327,7 +324,7 @@ details:not([open]) summary.ch-header::before{content:"▶ "}
 <div class="section">
   <div class="section-title">⑦ 城市线级分布（2026-05-12 当日正常班）</div>
   <div style="margin-bottom:12px"><span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:12px;color:#555"><span style="width:12px;height:12px;background:#1a3a6b;border-radius:2px;display:inline-block"></span>一线</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:12px;color:#555"><span style="width:12px;height:12px;background:#2e5fa3;border-radius:2px;display:inline-block"></span>新一线</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:12px;color:#555"><span style="width:12px;height:12px;background:#4a8fd4;border-radius:2px;display:inline-block"></span>二线</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:12px;color:#555"><span style="width:12px;height:12px;background:#5dba8a;border-radius:2px;display:inline-block"></span>三线</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:12px;color:#555"><span style="width:12px;height:12px;background:#8dd4a8;border-radius:2px;display:inline-block"></span>四线</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:12px;color:#555"><span style="width:12px;height:12px;background:#c0e8d0;border-radius:2px;display:inline-block"></span>五线</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:12px;color:#555"><span style="width:12px;height:12px;background:#e0e0e0;border-radius:2px;display:inline-block"></span>其他</span></div>
-  <table>
+  <div class="wide-wrap" style="min-width:0;-webkit-overflow-scrolling:touch"><table style="min-width:600px">
     <thead><tr><th style="text-align:left;width:12%">渠道</th><th style="text-align:left">分布（数字=单量）</th><th style="white-space:nowrap">三~五线占比</th></tr></thead>
     <tbody>
       <tr><td style="font-weight:700">整体</td>
